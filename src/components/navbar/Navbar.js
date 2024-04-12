@@ -1,8 +1,10 @@
 import "./Navbar.css";
 import logo from "../assets/logo.png";
 import cart_icon from "../assets/cart_icon.png";
+import { useState } from "react";
 
 function Navbar() {
+  const [menu, setMenu] = useState("shop");
   return (
     <div className="navbar">
       <div className="nav-logo">
@@ -10,12 +12,34 @@ function Navbar() {
         <p>Shopper</p>
       </div>
       <ul className="nav-menu">
-        <li>
+        <li
+          onClick={() => {
+            setMenu("shop");
+          }}
+        >
           Shop <hr />
         </li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>Kids</li>
+        <li
+          onClick={() => {
+            setMenu("men");
+          }}
+        >
+          Men
+        </li>
+        <li
+          onClick={() => {
+            setMenu("women");
+          }}
+        >
+          Women
+        </li>
+        <li
+          onClick={() => {
+            setMenu("kids");
+          }}
+        >
+          Kids
+        </li>
       </ul>
       <div className="nav-login-cart">
         <button>Login</button>
