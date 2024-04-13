@@ -17,28 +17,28 @@ function Navbar() {
             setMenu("shop");
           }}
         >
-          Shop <hr />
+          Shop {menu === "shop" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("men");
           }}
         >
-          Men
+          Men {menu === "men" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("women");
           }}
         >
-          Women
+          Women {menu === "women" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("kids");
           }}
         >
-          Kids
+          Kids {menu === "kids" ? <hr /> : <></>}
         </li>
       </ul>
       <div className="nav-login-cart">
